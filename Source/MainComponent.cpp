@@ -13,12 +13,11 @@ MainComponent::MainComponent()
     outputVolumeSlider.setRange(-100, 0);
     outputVolumeSlider.setTextBoxStyle(juce::Slider::TextBoxRight, false, 100, 20);
 
-    newAudioTrackButton.setButtonText("Open...");
-    newAudioTrackButton.onClick = [this] { return; };
+    newTrackButton.setButtonText("+");
+    newTrackButton.onClick = [this] { return; };
 
     addAndMakeVisible(outputVolumeSlider);
-    addAndMakeVisible(newAudioTrackButton);
-    addAndMakeVisible(newMidiTrackButton);
+    addAndMakeVisible(newTrackButton);
 
 
     // Make sure you set the size of the component after
@@ -91,4 +90,5 @@ void MainComponent::resized()
     // If you add any child components, this is where you should
     // update their positions.
     outputVolumeSlider.setBounds(100, 10, getWidth() - 110, 20);
+    newTrackButton.setBounds(100, 50, 20, 20);
 }

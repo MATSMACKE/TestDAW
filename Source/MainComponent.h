@@ -27,8 +27,7 @@ private:
     //==============================================================================
     // Your private member variables go here...
     juce::Slider outputVolumeSlider;
-    juce::TextButton newAudioTrackButton;
-    juce::TextButton newMidiTrackButton;
+    juce::TextButton newTrackButton;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

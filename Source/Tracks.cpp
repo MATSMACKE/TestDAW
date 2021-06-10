@@ -7,13 +7,31 @@
 
     This file contains all definitions of the TrackManager and Track classes
 
+    These classes are a very important part of the program, as they are 
+    responsible for the majority of audio processing.
+
   ==============================================================================
 */
 
 // Include header file, which contains all declarations of the TrackManager and Track classes
 #include "Tracks.h"
 
-TrackManager::TrackManager(string managerName) {
+TrackManager::TrackManager(string managerName) 
+{
 
 }
 
+void TrackManager::createTrack(string trackName, Track::TrackType trackType)
+{
+    trackVector.push_back(Track(trackName, trackType));
+}
+
+Track::Track(string name, TrackType requestedType) 
+{
+
+}
+
+void Track::rename(string newName)
+{
+    trackName = newName;
+}
