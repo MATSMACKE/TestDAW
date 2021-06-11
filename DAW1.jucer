@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="IUiwbK" name="DAW1" projectType="guiapp" useAppConfig="0"
-              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1">
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
+              companyName="Mats Macke">
   <MAINGROUP id="tRqP00" name="DAW1">
     <GROUP id="{0181367D-E148-E7EE-4B84-44BB01A2491A}" name="Source">
       <GROUP id="{4B8396C9-8768-66C5-8145-40382D042C0D}" name="Tracks">
