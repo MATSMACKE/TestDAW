@@ -28,7 +28,7 @@ class TrackManager;
 // Define Track class
 class Track {
 public:
-    // Create an enum of types of tracks
+    // An enum of types of tracks
     enum class TrackType {
         midi,
         audio,
@@ -62,10 +62,10 @@ private:
     vector<Track> trackVector;
 
 public:
-    // Create constructor
+    // Constructor for the TrackManager class
     TrackManager(string managerName);
 
-    // Create function for creating Tracks
+    // Function for creating a new Track in the TrackManager
     void createTrack(string trackName, Track::TrackType trackType);
 };
 

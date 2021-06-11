@@ -26,9 +26,10 @@ void TrackManager::createTrack(string trackName, Track::TrackType trackType)
     trackVector.push_back(Track(trackName, trackType));
 }
 
-Track::Track(string name, TrackType requestedType) 
+Track::Track(string requestedName, TrackType requestedType) 
 {
-
+    trackName = requestedName;
+    trackType = requestedType;
 }
 
 void Track::rename(string newName)
