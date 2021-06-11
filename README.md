@@ -1,4 +1,6 @@
 # TestDAW
-A DAW built with the JUCE framework. High likelihood of not being finished. Also literally does nothing in it's current state, so...
+A DAW built with the JUCE framework. 
 
-Also, commits on this repo will not always be working, so it is likely will not compile.
+High likelihood of not being finished. Also literally does nothing in it's current state, so...
+
+Also, commits on this repo will not always compile.
