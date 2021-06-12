@@ -5,14 +5,19 @@
               companyName="Mats Macke">
   <MAINGROUP id="tRqP00" name="DAW1">
     <GROUP id="{0181367D-E148-E7EE-4B84-44BB01A2491A}" name="Source">
-      <GROUP id="{4B8396C9-8768-66C5-8145-40382D042C0D}" name="Tracks">
-        <FILE id="EwqAvf" name="Tracks.cpp" compile="1" resource="0" file="Source/Tracks.cpp"/>
-        <FILE id="SVAenT" name="Tracks.h" compile="0" resource="0" file="Source/Tracks.h"/>
+      <GROUP id="{EF53578F-856B-7D0E-2007-8003E617E4E7}" name="GUI">
+        <FILE id="Vnc9k1" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+        <FILE id="JK3EwE" name="MainComponent.cpp" compile="1" resource="0"
+              file="Source/MainComponent.cpp"/>
+      </GROUP>
+      <GROUP id="{F7ED1CD7-41F1-4050-7355-67194523F0E9}" name="Audio">
+        <GROUP id="{4B8396C9-8768-66C5-8145-40382D042C0D}" name="Tracks">
+          <FILE id="EwqAvf" name="Tracks.cpp" compile="1" resource="0" file="Source/Tracks.cpp"/>
+          <FILE id="SVAenT" name="Tracks.h" compile="0" resource="0" file="Source/Tracks.h"/>
+        </GROUP>
+        <FILE id="Ux4hwu" name="Engine.cpp" compile="1" resource="0" file="Source/Engine.cpp"/>
       </GROUP>
       <FILE id="eKPMlY" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
-      <FILE id="Vnc9k1" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
-      <FILE id="JK3EwE" name="MainComponent.cpp" compile="1" resource="0"
-            file="Source/MainComponent.cpp"/>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>

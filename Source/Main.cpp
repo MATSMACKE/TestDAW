@@ -1,7 +1,8 @@
 /*
   ==============================================================================
 
-    This file contains the basic startup code for a JUCE application.
+    File containing app management, including startup, shutdown and new
+    instances being opened
 
   ==============================================================================
 */
