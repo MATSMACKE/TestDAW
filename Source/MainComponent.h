@@ -11,6 +11,14 @@
     ================================================================================
 */
 
+class FileBrowser : public juce::Component {
+
+};
+
+class TransportBar : public juce::Component {
+
+};
+
 class AllTracksWindow       : public juce::Component {
 
 };
@@ -19,15 +27,27 @@ class TrackPluginsWindow    : public juce::Component {
 
 };
 
-class TrackSynthWindow      : public juce::Component {
+class TrackSynthSection      : public juce::Component {
 
 };
 
-class NormalPlugin          : public juce::Component {
+class TrackEffectSection    : public juce::Component {
+
+};
+
+class TrackModSection : public juce::Component {
+
+};
+
+class EffectPlugin          : public juce::Component {
 
 };
 
 class SourcePlugin          : public juce::Component {
+
+};
+
+class ModulatorPlugin : public juce::Component {
 
 };
 
