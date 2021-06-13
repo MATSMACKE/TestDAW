@@ -16,14 +16,9 @@
 // Include header file, which contains all declarations of the TrackManager and Track classes
 #include "Tracks.h"
 
-TrackManager::TrackManager(string managerName) 
+void Track::newTrack(string trackName, TrackType trackType)
 {
-
-}
-
-void TrackManager::createTrack(string trackName, Track::TrackType trackType)
-{
-    trackVector.push_back(Track(trackName, trackType));
+    tracks.push_back(Track(trackName, trackType));
 }
 
 Track::Track(string requestedName, TrackType requestedType) 

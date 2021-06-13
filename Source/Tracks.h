@@ -22,23 +22,20 @@
 using std::string;
 using std::vector;
 
-// Declare Track class (required to create trackVector in TrackManager
-class TrackManager;
+// An enum of types of tracks
+enum class TrackType {
+    midi,
+    audio,
+    group,
+    trigger,
+    bus,
+    send,
+    master
+};
 
 // Define Track class
 class Track {
-public:
-    // An enum of types of tracks
-    enum class TrackType {
-        midi,
-        audio,
-        group,
-        trigger,
-        bus,
-        send,
-        master
-    };
-
+// INSTANCE MEMBERS AND METHODS
 private:
     // Track name (as shown in GUI)
     string trackName;
@@ -52,20 +49,12 @@ public:
 
     // Function to rename Track
     void rename(string newName);
-};
 
-// Declare and define TrackManager class
-class TrackManager {
+// STATIC MEMBERS AND METHODS
 private:
-    // trackVector stores all of the Tracks for the project, making it
-    // one of the most important variables in the whole app
-    vector<Track> trackVector;
+    // This vector contains all tracks in the project, it is very important
+    static std::vector<Track> tracks;
 
 public:
-    // Constructor for the TrackManager class
-    TrackManager(string managerName);
-
-    // Function for creating a new Track in the TrackManager
-    void createTrack(string trackName, Track::TrackType trackType);
+    static void newTrack(string newTrackName, TrackType newTrackType);
 };
-

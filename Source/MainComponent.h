@@ -65,12 +65,13 @@ class EffectLane            : public juce::Component {
 };
 
 
-struct GUISpace {
+struct GUIVars {
     int transportHeigt;
     int browserWidth;
     int trackPluginsHeight;
     int trackSegmentHeight;
 
+    GUIVars(int transportHeight, int browserWidth, int trackPluginsHeight, int trackSegmentHeight);
 };
 
 
@@ -102,7 +103,9 @@ public:
 private:
     //==============================================================================
     // Create instances of GUI components
+    GUIVars thisGUISpace;
 
+    TransportBar transportBar;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

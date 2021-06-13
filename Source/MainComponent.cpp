@@ -18,7 +18,9 @@ MainComponent::MainComponent()
     getLookAndFeel().setColour(juce::ResizableWindow::backgroundColourId, juce::Colour (0xff353643));
 
     // Add UI Elements
-    
+    auto availableArea = getLocalBounds();
+
+    transportBar.setBounds(availableArea.removeFromTop(thisGUISpace.transportHeight));
 
 
     // Make sure you set the size of the component after
@@ -62,7 +64,9 @@ void MainComponent::resized()
     // update their positions.
 
     auto windowArea = getLocalBounds();
+}
 
-    
+// GUIVars constructor. GUIVars struct stores parameters about UI. 
+GUIVars::GUIVars(int transportHeight, int browserWidth, int trackPluginsHeight, int trackSegmentHeight) {
 
 }
