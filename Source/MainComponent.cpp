@@ -18,14 +18,7 @@ MainComponent::MainComponent()
     getLookAndFeel().setColour(juce::ResizableWindow::backgroundColourId, juce::Colour (0xff353643));
 
     // Add UI Elements
-    outputVolumeSlider.setRange(-100, 0);
-    outputVolumeSlider.setTextBoxStyle(juce::Slider::TextBoxRight, false, 100, 20);
-
-    newTrackButton.setButtonText("+");
-    newTrackButton.onClick = [this] { return; };
-
-    addAndMakeVisible(outputVolumeSlider);
-    addAndMakeVisible(newTrackButton);
+    
 
 
     // Make sure you set the size of the component after
@@ -67,6 +60,9 @@ void MainComponent::resized()
     // This is called when the MainContentComponent is resized.
     // If you add any child components, this is where you should
     // update their positions.
-    outputVolumeSlider.setBounds(100, 10, getWidth() - 110, 20);
-    newTrackButton.setBounds(100, 50, 20, 20);
+
+    auto windowArea = getLocalBounds();
+
+    
+
 }

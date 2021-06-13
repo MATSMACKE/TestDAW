@@ -1,7 +1,7 @@
 /*
   ==============================================================================
 
-    File containing definitions of GUI functions
+    File containing definitions of Audio functions
 
   ==============================================================================
 */
