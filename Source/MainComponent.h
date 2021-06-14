@@ -28,7 +28,7 @@ class AllTracksWindow       : public juce::Component {
 
 };
 
-class TrackPluginsSection   : public juce::Component {
+class TrackPlugins          : public juce::Component {
 
 };
 
@@ -65,8 +65,9 @@ class EffectLane            : public juce::Component {
 };
 
 
-struct GUIVars {
-    int transportHeigt;
+class GUIVars {
+public:
+    int transportHeight;
     int browserWidth;
     int trackPluginsHeight;
     int trackSegmentHeight;
@@ -98,14 +99,20 @@ public:
     void paint (juce::Graphics& g) override;
     void resized() override;
 
+    void updateUI();
+
     void createTrack();
 
 private:
     //==============================================================================
     // Create instances of GUI components
-    GUIVars thisGUISpace;
-
     TransportBar transportBar;
+
+    TrackPlugins trackPlugins;
+
+    FileBrowser fileBrowser;
+
+    AllTracksWindow allTracksWindow;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

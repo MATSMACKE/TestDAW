@@ -18,10 +18,10 @@ MainComponent::MainComponent()
     getLookAndFeel().setColour(juce::ResizableWindow::backgroundColourId, juce::Colour (0xff353643));
 
     // Add UI Elements
-    auto availableArea = getLocalBounds();
-
-    transportBar.setBounds(availableArea.removeFromTop(thisGUISpace.transportHeight));
-
+    addAndMakeVisible(transportBar);
+    addAndMakeVisible(trackPlugins);
+    addAndMakeVisible(fileBrowser);
+    addAndMakeVisible(allTracksWindow);
 
     // Make sure you set the size of the component after
     // you add any child components.
@@ -47,7 +47,6 @@ MainComponent::~MainComponent()
     shutdownAudio();
 }
 
-
 //==============================================================================
 void MainComponent::paint (juce::Graphics& g)
 {
@@ -57,16 +56,35 @@ void MainComponent::paint (juce::Graphics& g)
     // You can add your drawing code here!
 }
 
+GUIVars guiVars = GUIVars(64, 128, 128, 100);
+
 void MainComponent::resized()
 {
     // This is called when the MainContentComponent is resized.
     // If you add any child components, this is where you should
     // update their positions.
+    updateUI();
+}
 
-    auto windowArea = getLocalBounds();
+void MainComponent::updateUI() {
+    // This is basically MainComponent::resized(), but will 
+    //also be called elsewhere to update UI
+    auto availableArea = getLocalBounds();
+
+    transportBar.setBounds(availableArea.removeFromTop(guiVars.transportHeight));
+    trackPlugins.setBounds(availableArea.removeFromBottom(guiVars.trackPluginsHeight));
+    fileBrowser.setBounds(availableArea.removeFromLeft(guiVars.browserWidth));
+    allTracksWindow.setBounds(availableArea);
+}
+
+void MainComponent::createTrack() {
+
 }
 
 // GUIVars constructor. GUIVars struct stores parameters about UI. 
 GUIVars::GUIVars(int transportHeight, int browserWidth, int trackPluginsHeight, int trackSegmentHeight) {
-
+    this->transportHeight = transportHeight;
+    this->browserWidth = browserWidth;
+    this->trackPluginsHeight = trackPluginsHeight;
+    this->trackSegmentHeight = trackSegmentHeight;
 }
