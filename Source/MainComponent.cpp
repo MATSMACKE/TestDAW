@@ -1,5 +1,6 @@
 #include "MainComponent.h"
 #include "Tracks.h"
+#include "GUIComponents.h"
 
 /*
   ==============================================================================
@@ -56,7 +57,7 @@ void MainComponent::paint (juce::Graphics& g)
     // You can add your drawing code here!
 }
 
-GUIVars guiVars = GUIVars(64, 128, 128, 100);
+GUIVars MainComponent::guiVars = GUIVars(64, 128, 128, 100);
 
 void MainComponent::resized()
 {

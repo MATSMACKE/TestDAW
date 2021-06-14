@@ -42,9 +42,6 @@ private:
 
     // Type of Track (types defined in Track::TrackType)
     TrackType trackType;
-
-    // This vector contains all tracks in the project, it is very important
-    static std::vector<Track> tracks;
 public:
     // Constructor makes track with name and type
     Track(string name, TrackType requestedType);

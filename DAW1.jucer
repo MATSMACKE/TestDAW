@@ -6,6 +6,9 @@
   <MAINGROUP id="tRqP00" name="DAW1">
     <GROUP id="{0181367D-E148-E7EE-4B84-44BB01A2491A}" name="Source">
       <GROUP id="{EF53578F-856B-7D0E-2007-8003E617E4E7}" name="GUI">
+        <FILE id="BOufxK" name="GUIComponents.cpp" compile="1" resource="0"
+              file="Source/GUIComponents.cpp"/>
+        <FILE id="FlsXc1" name="GUIComponents.h" compile="0" resource="0" file="Source/GUIComponents.h"/>
         <FILE id="Vnc9k1" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
         <FILE id="JK3EwE" name="MainComponent.cpp" compile="1" resource="0"
               file="Source/MainComponent.cpp"/>
