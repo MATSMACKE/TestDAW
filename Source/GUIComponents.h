@@ -22,6 +22,7 @@
 */
 
 class FileBrowser : public juce::Component {
+public:
     FileBrowser();
     ~FileBrowser();
 };

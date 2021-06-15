@@ -12,8 +12,6 @@
 
 #pragma once
 
-#include "MainComponent.h"
-
 // Vector is used for list of tracks in TrackManager
 // String is used for names of Tracks and Managers
 #include <vector>
@@ -44,10 +42,8 @@ private:
     TrackType trackType;
 public:
     // Constructor makes track with name and type
-    Track(string name, TrackType requestedType);
+    Track(string name = "New Track", TrackType requestedType = TrackType::audio);
 
     // Function to rename Track
     void rename(string newName);
-
-    static void newTrack(string newTrackName, TrackType newTrackType);
 };

@@ -1,5 +1,5 @@
-#include "MainComponent.h"
 #include "Tracks.h"
+#include "MainComponent.h"
 #include "GUIComponents.h"
 
 /*
@@ -78,8 +78,9 @@ void MainComponent::updateUI() {
     allTracksWindow.setBounds(availableArea);
 }
 
-void MainComponent::createTrack() {
-
+void MainComponent::newTrack(string newTrackName, TrackType newTrackType)
+{
+    tracks.push_back(Track(newTrackName, newTrackType));
 }
 
 // GUIVars constructor. GUIVars struct stores parameters about UI. 

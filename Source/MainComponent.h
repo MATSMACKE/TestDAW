@@ -1,7 +1,17 @@
 #pragma once
 
+// Vector is used for list of tracks in TrackManager
+// String is used for names of Tracks and Managers
+#include <vector>
+#include <string>
+
+using std::string;
+using std::vector;
+
 #include <JuceHeader.h>
 #include <vector>
+#include "GUIComponents.h"
+#include "Tracks.h"
 
 //==================================================================================
 /*
@@ -28,7 +38,7 @@ public:
 
     void updateUI();
 
-    void createTrack();
+    void newTrack(string newTrackName, TrackType newTrackType);
 
 private:
     //==============================================================================

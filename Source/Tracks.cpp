@@ -13,13 +13,10 @@
   ==============================================================================
 */
 
+
 // Include header file, which contains all declarations of the TrackManager and Track classes
 #include "Tracks.h"
-
-void Track::newTrack(string trackName, TrackType trackType)
-{
-    tracks.push_back(Track(trackName, trackType));
-}
+#include "MainComponent.h"
 
 Track::Track(string requestedName, TrackType requestedType) 
 {
