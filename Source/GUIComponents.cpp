@@ -10,6 +10,10 @@
 
 #include "GUIComponents.h"
 
+FileBrowser::FileBrowser() {
+    // Call updateUI on MainComponent
+}
+
 FileBrowser::~FileBrowser() {
     // Call updateUI on MainComponent
 }

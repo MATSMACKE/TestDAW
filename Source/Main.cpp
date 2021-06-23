@@ -61,7 +61,7 @@ public:
     {
     public:
         MainWindow (/*juce::String name*/)
-            : DocumentWindow (/*name*/ "MatsM Studio Alpha v0.1",
+            : DocumentWindow (/*name*/ "Alpha v0.1",
                               juce::Desktop::getInstance().getDefaultLookAndFeel()
                                                           .findColour (juce::ResizableWindow::backgroundColourId),
                               DocumentWindow::allButtons)
